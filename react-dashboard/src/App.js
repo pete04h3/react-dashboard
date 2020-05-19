@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 
 import Circle from "react-circle";
@@ -8,6 +8,7 @@ import Sidebar from "./components/Sidebar";
 function App() {
   return (
     <div className="App">
+      <h4></h4>
       <Circle
         animate={true} // Boolean: Animated/Static progress
         responsive={true} // Boolean: Make SVG adapt to parent size

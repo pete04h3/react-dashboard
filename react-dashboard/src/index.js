@@ -3,8 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import Sidebar from "./components/Sidebar";
+import Fetchmydata from "./components/Fetch";
 
 import * as serviceWorker from "./serviceWorker";
+import Myapp from "./components/Data";
+
 const items = [
   { name: "home", label: "Home" },
   { name: "sales", label: "Sales" },
@@ -17,6 +20,8 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     {/*   <Sidebar items={items} /> */}
+    <Fetchmydata />
+    {/*   <Myapp /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
