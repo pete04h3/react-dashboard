@@ -5,11 +5,11 @@ const Post = ({ body }) => {
   return (
     <div className="contentWrapper">
       {body.map((post) => {
-        const { _id, title, content } = post;
+        const { id, level, capacity } = post;
         return (
-          <div key={_id}>
-            <h2>{title}</h2>
-            <p>{content}</p>
+          <div key={id}>
+            <h2>{level}</h2>
+            <p>{capacity}</p>
           </div>
         );
       })}
@@ -24,7 +24,7 @@ class Fetchmydata extends React.Component {
     error: null,
   };
   fetchPosts() {
-    fetch(`https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/posts.json`)
+    fetch(`https://foobar-exam.herokuapp.com/`)
       .then((response) => response.json())
       .then((data) =>
         this.setState({
@@ -41,9 +41,10 @@ class Fetchmydata extends React.Component {
 
   render() {
     const { isLoading, posts, error } = this.state;
+
     return (
       <React.Fragment>
-        <div className="logo"></div>
+        {console.log(posts)}
 
         {!isLoading ? Object.keys(posts).map((key) => <Post key={key} body={posts[key]} />) : <h3>Loading...</h3>}
       </React.Fragment>

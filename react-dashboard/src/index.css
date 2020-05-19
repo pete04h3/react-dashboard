@@ -9,8 +9,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.logo {
-  background-image: url("logo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+#wrapper {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 120px;
+  bottom: 0;
 }

@@ -1,14 +1,11 @@
 import React from "react";
+import Circle from "react-circle";
 
 import "./App.css";
-
-import Circle from "react-circle";
-import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <div className="App">
-      <h4></h4>
       <Circle
         animate={true} // Boolean: Animated/Static progress
         responsive={true} // Boolean: Make SVG adapt to parent size
@@ -26,6 +23,7 @@ function App() {
         showPercentage={true} // Boolean: Show/hide percentage.
         showPercentageSymbol={true} // Boolean: Show/hide only the "%" symbol.
       />
+      }
     </div>
   );
 }

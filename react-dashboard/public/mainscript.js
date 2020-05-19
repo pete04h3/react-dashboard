@@ -32,5 +32,9 @@ function displayBeertaps(taps) {
   console.log(cap, lvl);
   let percentage = calculateDiff(cap, lvl);
   console.log(percentage);
-  document.querySelector("#root > div.App > h4").textContent = percentage + "%" + " " + "id:" + tap_id;
+  const clone = document.querySelector("template").cloneNode(true).content;
+  clone.querySelector("h4").textContent = percentage + "%" + " " + "id:" + tap_id;
+
+  document.querySelector("#wrapper").appendChild(clone);
 }
+/* document.querySelector("#root > div.App > h4").textContent = percentage + "%" + " " + "id:" + tap_id; */
