@@ -23,7 +23,6 @@ function App() {
         showPercentage={true} // Boolean: Show/hide percentage.
         showPercentageSymbol={true} // Boolean: Show/hide only the "%" symbol.
       />
-      }
     </div>
   );
 }
